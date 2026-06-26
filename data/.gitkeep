@@ -1,0 +1,2 @@
+# Este directorio es necesario para que el servidor pueda crear db.json en runtime.
+# El archivo db.json está en .gitignore por seguridad.

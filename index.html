@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Craft — Estrategia creativa para tu negocio</title>
+<meta name="description" content="Craft genera tu estrategia de marketing personalizada. Plan de campaña completo para tu negocio local."/>
+<meta property="og:title" content="Craft — Estrategia creativa para tu negocio"/>
+<meta property="og:description" content="Datos + Creatividad para pequeños negocios. Estrategia en segundos."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --navy:#0D1B2A;--nm:#0A2535;--teal:#00B4D8;--td:#0077A8;
+  --mint:#90E0EF;--w:#FFFFFF;--gray:#64748B;--light:#EAF6FB;
+  --border:rgba(0,180,216,.18);--ease:cubic-bezier(.16,1,.3,1);
+  --fd:'Playfair Display',Georgia,serif;--fb:'DM Sans',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--w);font-family:var(--fb);overflow-x:hidden;line-height:1.6}
+a{color:inherit;text-decoration:none}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.4;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E")}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.on{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* URGENCY BAR */
+#urgbar{background:linear-gradient(90deg,var(--td),var(--teal),var(--td));background-size:200% 100%;animation:urgmove 4s linear infinite;padding:.55rem 2rem;text-align:center;font-size:.78rem;font-weight:500;letter-spacing:.04em;display:flex;align-items:center;justify-content:center;gap:.75rem;position:relative;z-index:201}
+@keyframes urgmove{0%{background-position:0 0}100%{background-position:200% 0}}
+#urgbar span{color:var(--navy)}
+#urgbar strong{color:var(--navy)}
+#countdown{font-family:var(--fd);font-size:.9rem;background:rgba(13,27,42,.25);padding:.1rem .45rem;border-radius:4px;color:var(--navy);font-weight:700}
+
+/* NAV */
+nav{position:sticky;top:0;left:0;right:0;z-index:200;padding:1rem 2.5rem;display:flex;
+  align-items:center;justify-content:space-between;backdrop-filter:blur(18px);
+  background:rgba(13,27,42,.88);border-bottom:1px solid var(--border);transition:background .3s}
+.logo{font-family:var(--fd);font-size:1.55rem;font-weight:900;letter-spacing:-.02em;cursor:pointer}
+.logo span{color:var(--teal)}
+.nav-links{display:flex;gap:1.75rem;list-style:none}
+.nav-links a{font-size:.82rem;font-weight:500;color:var(--mint);letter-spacing:.04em;transition:color .2s}
+.nav-links a:hover{color:var(--w)}
+.nav-cta{background:var(--teal)!important;color:var(--navy)!important;padding:.42rem 1.1rem;border-radius:6px;transition:background .2s!important}
+.nav-cta:hover{background:var(--mint)!important}
+.burger{display:none;background:none;border:none;color:var(--w);font-size:1.5rem;cursor:pointer}
+
+/* HERO */
+#hero{min-height:calc(100vh - 80px);display:grid;grid-template-columns:1fr 1fr;align-items:center;
+  padding:6rem 5rem 5rem;gap:4rem;position:relative;overflow:hidden;z-index:1}
+.hbg{position:absolute;border-radius:50%;pointer-events:none}
+.hbg1{width:700px;height:700px;top:-200px;right:-150px;background:radial-gradient(circle,rgba(0,180,216,.11) 0%,transparent 70%)}
+.hbg2{width:450px;height:450px;bottom:-80px;left:25%;background:radial-gradient(circle,rgba(0,180,216,.07) 0%,transparent 70%)}
+.tag-row{display:flex;align-items:center;gap:.5rem;margin-bottom:1.4rem}
+.tag-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.tag-txt{font-size:.72rem;font-weight:500;letter-spacing:.12em;color:var(--gray);text-transform:uppercase}
+h1{font-family:var(--fd);font-size:clamp(2.8rem,5.5vw,5rem);font-weight:900;line-height:1.0;letter-spacing:-.03em;margin-bottom:1.4rem}
+h1 em{font-style:italic;color:var(--teal)}
+.hsub{font-size:1.05rem;color:var(--mint);max-width:460px;margin-bottom:1.4rem;line-height:1.75}
+.sp-row{display:flex;align-items:center;gap:.75rem;margin-bottom:2rem;font-size:.82rem;color:var(--gray)}
+.sp-faces{display:flex}
+.spf{width:28px;height:28px;border-radius:50%;border:2px solid var(--navy);margin-left:-8px;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:.6rem;font-weight:700;color:var(--navy)}
+.spf:first-child{margin-left:0}
+.spf-a{background:var(--teal)}.spf-b{background:#F59E0B}.spf-c{background:#10B981}
+.hbtns{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;font-family:var(--fb);font-weight:500;font-size:.95rem;padding:.8rem 1.9rem;border-radius:8px;cursor:pointer;border:none;transition:all .2s var(--ease);gap:.4rem}
+.btn-p{background:var(--teal);color:var(--navy)}
+.btn-p:hover{background:var(--mint);transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,180,216,.28)}
+.btn-s{color:var(--mint);background:transparent;font-size:.9rem}
+.btn-s:hover{color:var(--w)}
+.btn-s::after{content:'→'}
+
+/* HERO CARD */
+.hcard{background:rgba(10,37,53,.87);border:1px solid var(--border);border-radius:20px;padding:2rem;backdrop-filter:blur(12px);position:relative;overflow:hidden}
+.hcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--mint),var(--teal));background-size:200% 100%;animation:shim 3s linear infinite}
+@keyframes shim{0%{background-position:-200% 0}100%{background-position:200% 0}}
+.av{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.85rem}
+.av-a{background:var(--teal)}.av-b{background:#F59E0B}.av-c{background:#10B981}
+.cname{font-weight:500;font-size:.95rem;margin-bottom:.12rem}
+.crole{font-size:.74rem;color:var(--gray);margin-bottom:1.2rem}
+.cquote{font-family:var(--fd);font-style:italic;font-size:.92rem;color:var(--mint);line-height:1.55;border-left:2px solid var(--teal);padding-left:.85rem;margin-bottom:1.2rem}
+.cres{background:rgba(0,180,216,.1);border:1px solid var(--border);border-radius:10px;padding:.8rem 1rem}
+.cres-l{font-size:.67rem;letter-spacing:.1em;color:var(--gray);text-transform:uppercase;margin-bottom:.2rem}
+.cres-v{color:var(--teal);font-weight:500;font-size:.87rem}
+
+/* GUARANTEE STRIP */
+#guarantee{padding:1.4rem 5rem;background:rgba(16,185,129,.06);border-top:1px solid rgba(16,185,129,.2);border-bottom:1px solid rgba(16,185,129,.2);display:flex;align-items:center;justify-content:center;gap:3rem;z-index:1;position:relative;flex-wrap:wrap}
+.gitem{display:flex;align-items:center;gap:.55rem;font-size:.83rem;color:var(--mint)}
+.gitem span:first-child{font-size:1.1rem}
+
+/* COUNTER */
+#counter{padding:1.5rem 5rem;background:rgba(0,180,216,.04);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center;gap:.65rem;z-index:1;position:relative}
+.c-dot{width:8px;height:8px;border-radius:50%;background:#10B981;animation:pulse 1.5s infinite;flex-shrink:0}
+#counter p{font-size:.87rem;color:var(--mint);text-align:center}
+#counter strong{color:var(--w)}
+#ctr-num{font-family:var(--fd);font-size:1.1rem;color:var(--teal);font-weight:900}
+
+/* STATS */
+#stats{padding:4rem 5rem;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;z-index:1}
+.si{padding:2rem;border-right:1px solid var(--border);text-align:center}
+.si:last-child{border-right:none}
+.sv{font-family:var(--fd);font-size:3.2rem;font-weight:900;color:var(--teal);line-height:1;margin-bottom:.4rem}
+.sl{font-size:.88rem;color:var(--mint);line-height:1.4}
+.ss{font-size:.67rem;color:var(--gray);margin-top:.35rem;font-style:italic}
+
+/* SECTION */
+section{position:relative;z-index:1}
+.sec-lbl{font-size:.72rem;font-weight:500;letter-spacing:.15em;color:var(--teal);text-transform:uppercase;margin-bottom:.65rem}
+.sec-title{font-family:var(--fd);font-size:clamp(1.8rem,3.5vw,2.75rem);font-weight:700;line-height:1.1;letter-spacing:-.02em;margin-bottom:.85rem}
+.sec-sub{font-size:.97rem;color:var(--mint);max-width:540px;line-height:1.7;margin-bottom:2.75rem}
+
+/* DEMO */
+#demo{padding:6rem 5rem;background:linear-gradient(180deg,transparent,rgba(0,180,216,.025) 50%,transparent)}
+.gen-wrap{background:rgba(10,37,53,.72);border:1px solid var(--border);border-radius:20px;overflow:hidden}
+.gen-top{padding:1.75rem 2.5rem;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.gen-top h3{font-family:var(--fd);font-size:1.25rem;font-weight:700;margin-bottom:.2rem}
+.gen-top p{font-size:.82rem;color:var(--gray)}
+.gen-badge{font-size:.7rem;font-weight:500;color:var(--teal);background:rgba(0,180,216,.1);border:1px solid var(--border);border-radius:99px;padding:.28rem .75rem;white-space:nowrap;flex-shrink:0}
+.gen-form{padding:2rem 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.fg{display:flex;flex-direction:column;gap:.38rem}
+.fg.full{grid-column:1/-1}
+label{font-size:.76rem;font-weight:500;color:var(--mint);letter-spacing:.05em}
+input,select,textarea{background:rgba(13,27,42,.82);border:1px solid var(--border);border-radius:8px;padding:.68rem 1rem;color:var(--w);font-family:var(--fb);font-size:.87rem;transition:border-color .2s,box-shadow .2s;outline:none;width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,180,216,.11)}
+select option{background:var(--nm)}
+textarea{resize:vertical;min-height:68px}
+.gen-foot{padding:1.2rem 2.5rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.gen-foot p{font-size:.76rem;color:var(--gray)}
+#genBtn{background:var(--teal);color:var(--navy);font-weight:500;font-size:.9rem;padding:.72rem 1.9rem;border-radius:8px;border:none;cursor:pointer;transition:all .2s;white-space:nowrap;display:flex;align-items:center;gap:.45rem}
+#genBtn:hover{background:var(--mint);transform:translateY(-2px)}
+#genBtn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.spin{width:13px;height:13px;border:2px solid rgba(13,27,42,.25);border-top:2px solid var(--navy);border-radius:50%;animation:rot .7s linear infinite;display:none}
+@keyframes rot{to{transform:rotate(360deg)}}
+
+/* PROCESS ANIM */
+#proc-anim{display:none;padding:1.5rem 2.5rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.proc-steps{display:flex;align-items:center}
+.ps{flex:1;display:flex;flex-direction:column;align-items:center;gap:.4rem;position:relative;opacity:.3;transition:opacity .4s}
+.ps.active{opacity:1}
+.ps-dot{width:38px;height:38px;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.95rem;background:var(--nm);transition:all .4s;position:relative;z-index:1}
+.ps.active .ps-dot{border-color:var(--teal);background:rgba(0,180,216,.15);box-shadow:0 0 0 7px rgba(0,180,216,.08)}
+.ps.done .ps-dot{border-color:var(--teal);background:var(--teal);font-size:.9rem}
+.ps-line{position:absolute;top:19px;left:calc(50% + 19px);right:calc(-50% + 19px);height:2px;background:var(--border);z-index:0;transition:background .4s}
+.ps.active .ps-line,.ps.done .ps-line{background:var(--teal)}
+.ps:last-child .ps-line{display:none}
+.ps-lbl{font-size:.7rem;color:var(--gray);text-align:center;transition:color .4s;margin-top:.25rem}
+.ps.active .ps-lbl{color:var(--teal)}.ps.done .ps-lbl{color:var(--mint)}
+.proc-msg{margin-top:1rem;font-size:.85rem;color:var(--mint);text-align:center;min-height:1.2rem}
+.proc-msg span{display:inline-block;animation:fadein .4s}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* RESULTS */
+#results{display:none;padding:0 2.5rem 2.5rem}
+.res-hd{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 0 1rem;border-top:1px solid var(--border);flex-wrap:wrap;gap:.75rem}
+.res-hd h4{font-family:var(--fd);font-size:1.1rem;font-weight:700;color:var(--teal)}
+.lock-b{display:flex;align-items:center;gap:.35rem;background:rgba(0,180,216,.1);border:1px solid var(--border);border-radius:99px;padding:.28rem .75rem;font-size:.73rem;color:var(--mint)}
+.sp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.2rem}
+.sc{background:rgba(13,27,42,.62);border:1px solid var(--border);border-radius:12px;padding:1.2rem;position:relative;overflow:hidden}
+.sc.blurred .sb{filter:blur(5px);user-select:none;pointer-events:none}
+.sc.blurred::after{content:'🔒 Solo Plan Pro';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.8rem;color:var(--teal);font-weight:500;background:rgba(10,37,53,.55);border-radius:12px;backdrop-filter:blur(2px)}
+.st{font-size:.68rem;font-weight:500;letter-spacing:.1em;color:var(--teal);text-transform:uppercase;margin-bottom:.6rem}
+.sb{font-size:.87rem;color:var(--mint);line-height:1.6}
+.sb strong{color:var(--w)}.sb ul{padding-left:1rem;margin-top:.35rem}.sb li{margin-bottom:.22rem}
+.upcta{background:linear-gradient(135deg,rgba(0,119,168,.3),rgba(0,180,216,.14));border:1px solid var(--teal);border-radius:12px;padding:1.4rem;text-align:center}
+.upcta p{font-size:.88rem;color:var(--mint);margin-bottom:.9rem}
+.upcta strong{color:var(--w)}
+.upcta a{background:var(--teal);color:var(--navy);font-weight:500;padding:.62rem 1.65rem;border-radius:8px;font-size:.87rem;display:inline-block;transition:all .2s}
+.upcta a:hover{background:var(--mint);transform:translateY(-2px)}
+
+/* MOCK DASHBOARD */
+#mockup{padding:7rem 5rem;background:linear-gradient(180deg,transparent,rgba(0,180,216,.03) 50%,transparent)}
+.mock-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:3rem}
+.mock-screen{background:rgba(10,37,53,.8);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,.4)}
+.mock-bar{background:var(--nm);padding:.65rem 1rem;display:flex;align-items:center;gap:.45rem;border-bottom:1px solid var(--border)}
+.mock-dot{width:10px;height:10px;border-radius:50%}
+.mock-dot:nth-child(1){background:#FF5F57}.mock-dot:nth-child(2){background:#FEBC2E}.mock-dot:nth-child(3){background:#28C840}
+.mock-url{flex:1;background:rgba(13,27,42,.5);border-radius:4px;padding:.2rem .65rem;font-size:.7rem;color:var(--gray);text-align:center;margin:0 .5rem}
+.mock-body{padding:1.25rem}
+.mock-head{font-family:var(--fd);font-size:.9rem;font-weight:700;margin-bottom:1rem;color:var(--teal)}
+.mock-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:1rem}
+.mm{background:rgba(0,180,216,.08);border:1px solid var(--border);border-radius:8px;padding:.7rem;text-align:center}
+.mm-v{font-family:var(--fd);font-size:1.3rem;font-weight:900;color:var(--w);line-height:1}
+.mm-l{font-size:.62rem;color:var(--gray);margin-top:.2rem}
+.mm-d{font-size:.68rem;color:#10B981;margin-top:.1rem}
+.mock-cal{display:grid;grid-template-columns:repeat(7,1fr);gap:.3rem;margin-bottom:1rem}
+.mc-hd{font-size:.6rem;color:var(--gray);text-align:center;font-weight:500}
+.mc-day{height:22px;border-radius:4px;background:rgba(13,27,42,.5);border:1px solid var(--border)}
+.mc-day.has{background:rgba(0,180,216,.2);border-color:var(--teal)}
+.mc-day.pub{background:var(--teal)}
+.mock-post{background:rgba(13,27,42,.5);border:1px solid var(--border);border-radius:8px;padding:.75rem;display:flex;align-items:flex-start;gap:.7rem}
+.mp-ico{width:32px;height:32px;border-radius:6px;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.mp-txt{font-size:.75rem;color:var(--mint);line-height:1.5}
+.mp-txt strong{color:var(--w);display:block;margin-bottom:.1rem}
+.mock-points{display:flex;flex-direction:column;gap:1.25rem}
+.mp{display:flex;align-items:flex-start;gap:.9rem}
+.mp-num{width:36px;height:36px;border-radius:50%;background:rgba(0,180,216,.12);border:1px solid var(--teal);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:700;color:var(--teal);font-size:.95rem;flex-shrink:0}
+.mp-info strong{display:block;font-size:.92rem;margin-bottom:.2rem}
+.mp-info p{font-size:.82rem;color:var(--gray);line-height:1.5}
+
+/* TESTIMONIALS */
+#testimonials{padding:7rem 5rem}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
+.tcard{background:rgba(10,37,53,.6);border:1px solid var(--border);border-radius:18px;padding:2rem;transition:all .3s;position:relative}
+.tcard:hover{border-color:rgba(0,180,216,.4);transform:translateY(-5px)}
+.tcard::before{content:'❝';position:absolute;top:1.2rem;right:1.5rem;font-family:var(--fd);font-size:2.8rem;color:var(--teal);opacity:.1;line-height:1}
+.tname{font-weight:500;font-size:.94rem;margin-bottom:.1rem}
+.trole{font-size:.74rem;color:var(--gray);margin-bottom:1rem}
+.tquote{font-family:var(--fd);font-style:italic;font-size:.91rem;color:var(--mint);line-height:1.6;margin-bottom:1.2rem}
+.tstats{display:flex;gap:.6rem;flex-wrap:wrap}
+.tstat{background:rgba(0,180,216,.1);border:1px solid var(--border);border-radius:8px;padding:.38rem .7rem;font-size:.72rem}
+.tstat strong{color:var(--teal);display:block;font-size:.95rem;font-family:var(--fd)}
+
+/* DIFF */
+#diff{padding:7rem 5rem;background:linear-gradient(180deg,transparent,rgba(0,180,216,.025) 50%,transparent)}
+.dclaim{font-family:var(--fd);font-size:clamp(1.6rem,3vw,2.25rem);font-weight:700;letter-spacing:-.02em;margin-bottom:.35rem}
+.dclaim em{font-style:italic;color:var(--teal)}
+table{width:100%;border-collapse:collapse;border-radius:14px;overflow:hidden;margin-top:2.75rem}
+thead tr{background:var(--td)}
+th{padding:.9rem 1.4rem;text-align:left;font-size:.77rem;letter-spacing:.08em;font-weight:500}
+tbody tr{border-bottom:1px solid var(--border);transition:background .2s}
+tbody tr:nth-child(even){background:rgba(10,37,53,.5)}
+tbody tr:hover{background:rgba(0,180,216,.06)}
+td{padding:.95rem 1.4rem;font-size:.9rem}
+td:first-child{font-weight:600;color:var(--teal)}
+td:nth-child(2){color:#FF9999}
+td:last-child{color:var(--mint)}
+.dfn{margin-top:1.2rem;font-size:.82rem;color:var(--gray);font-style:italic;text-align:center}
+
+/* FEATURES */
+#features{padding:7rem 5rem}
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3.5rem}
+.fcard{background:rgba(10,37,53,.5);border:1px solid var(--border);border-radius:16px;padding:1.75rem;transition:all .3s;position:relative;overflow:hidden}
+.fcard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--teal),transparent);transform:scaleX(0);transition:transform .3s var(--ease)}
+.fcard:hover{border-color:rgba(0,180,216,.4);background:rgba(0,180,216,.05);transform:translateY(-4px)}
+.fcard:hover::after{transform:scaleX(1)}
+.ficon{font-size:1.6rem;margin-bottom:.85rem}
+.ftitle{font-family:var(--fd);font-size:1.03rem;font-weight:700;margin-bottom:.45rem}
+.fdesc{font-size:.83rem;color:var(--gray);line-height:1.6}
+.fbadge{display:inline-block;font-size:.63rem;letter-spacing:.07em;font-weight:500;padding:.18rem .52rem;border-radius:99px;margin-top:.6rem}
+.b-all{background:rgba(100,116,139,.14);color:var(--gray);border:1px solid rgba(100,116,139,.28)}
+.b-pro{background:rgba(0,180,216,.11);color:var(--teal);border:1px solid var(--border)}
+.b-prem{background:rgba(245,158,11,.11);color:#F59E0B;border:1px solid rgba(245,158,11,.24)}
+
+/* PRICING */
+#pricing{padding:7rem 5rem;background:linear-gradient(180deg,transparent,rgba(0,180,216,.025) 50%,transparent)}
+.ptoggle{display:flex;align-items:center;gap:1rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.tog{display:flex;background:rgba(10,37,53,.8);border:1px solid var(--border);border-radius:99px;padding:.22rem}
+.to{padding:.42rem 1.05rem;border-radius:99px;font-size:.81rem;font-weight:500;cursor:pointer;transition:all .2s;border:none;background:none;color:var(--gray);font-family:var(--fb)}
+.to.on{background:var(--teal);color:var(--navy)}
+.save-tag{font-size:.73rem;color:var(--teal);background:rgba(0,180,216,.1);border:1px solid var(--border);border-radius:99px;padding:.18rem .62rem;display:none}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;align-items:start}
+.pc{background:rgba(10,37,53,.62);border:1px solid var(--border);border-radius:20px;padding:2.2rem;transition:all .3s;position:relative;overflow:hidden}
+.pc.feat{border-color:var(--teal);transform:scale(1.03)}
+.pc.feat::before{content:'MÁS POPULAR';position:absolute;top:0;left:0;right:0;background:var(--teal);color:var(--navy);font-size:.67rem;letter-spacing:.12em;font-weight:700;text-align:center;padding:.33rem}
+.pc.feat .ph{margin-top:1.5rem}
+.pc:hover:not(.feat){border-color:rgba(0,180,216,.35);transform:translateY(-4px)}
+.pname{font-family:var(--fd);font-size:1.28rem;font-weight:700;margin-bottom:.28rem}
+.pdesc{font-size:.79rem;color:var(--gray);margin-bottom:1.4rem;line-height:1.5}
+.ppr{display:flex;align-items:baseline;gap:.28rem;margin-bottom:.22rem}
+.pamt{font-family:var(--fd);font-size:2.75rem;font-weight:900;transition:all .3s}
+.pcur{font-size:.83rem;color:var(--gray);align-self:flex-start;margin-top:.45rem}
+.pper{font-size:.79rem;color:var(--gray)}
+.psave{font-size:.73rem;color:var(--teal);margin-bottom:1.4rem;min-height:1rem}
+.pdiv{border:none;border-top:1px solid var(--border);margin:1.35rem 0}
+.pf{list-style:none;display:flex;flex-direction:column;gap:.62rem;margin-bottom:1.9rem}
+.pf li{font-size:.84rem;display:flex;align-items:flex-start;gap:.55rem;line-height:1.4}
+.pf li::before{content:'✓';color:var(--teal);font-weight:700;flex-shrink:0;margin-top:.05rem}
+.pf li.off{color:var(--gray)}
+.pf li.off::before{content:'✗';color:var(--gray)}
+.pbtn{display:block;width:100%;text-align:center;padding:.88rem;border-radius:10px;font-weight:500;font-size:.88rem;transition:all .2s var(--ease);cursor:pointer;border:none;font-family:var(--fb)}
+.pb-out{background:transparent;border:1px solid var(--border);color:var(--mint)}
+.pb-out:hover{border-color:var(--teal);color:var(--w)}
+.pb-sol{background:var(--teal);color:var(--navy)}
+.pb-sol:hover{background:var(--mint);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,180,216,.25)}
+.pp-note{margin-top:.7rem;text-align:center;font-size:.72rem;color:var(--gray);display:flex;align-items:center;justify-content:center;gap:.3rem}
+/* PayPal button placeholder — se activa cuando tienes tu Client ID */
+.pp-btn-placeholder{margin-top:.7rem;background:rgba(255,196,57,.1);border:1px dashed rgba(255,196,57,.3);border-radius:8px;padding:.6rem;text-align:center;font-size:.72rem;color:rgba(255,196,57,.7)}
+
+/* FAQ */
+#faq{padding:7rem 5rem}
+.faq-wrap{max-width:700px;margin-top:3rem}
+.fqi{border-bottom:1px solid var(--border)}
+.fqq{display:flex;align-items:center;justify-content:space-between;padding:1.15rem 0;cursor:pointer;font-size:.95rem;font-weight:500;color:var(--w);gap:1rem;user-select:none;transition:color .2s}
+.fqq:hover{color:var(--teal)}
+.fqi-ico{font-size:1.1rem;color:var(--teal);flex-shrink:0;transition:transform .35s var(--ease)}
+.fqa{max-height:0;overflow:hidden;transition:max-height .45s var(--ease)}
+.fqa p{padding-bottom:1.15rem;font-size:.88rem;color:var(--mint);line-height:1.75}
+.fqa p a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+.fqi.open .fqi-ico{transform:rotate(45deg)}
+.fqi.open .fqa{max-height:250px}
+
+/* MARKET */
+#market{padding:7rem 5rem;background:linear-gradient(180deg,transparent,rgba(0,180,216,.025) 50%,transparent)}
+.ml{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:3.5rem}
+.tfunnel{display:flex;flex-direction:column;gap:.7rem}
+.trow{border-radius:10px;padding:1.1rem 1.35rem;display:flex;align-items:center;justify-content:space-between;border:1px solid var(--border);transition:border-color .3s}
+.trow:hover{border-color:var(--teal)}
+.trow:nth-child(1){background:rgba(10,48,64,.8)}
+.trow:nth-child(2){background:rgba(10,48,64,.7);margin:0 1.35rem}
+.trow:nth-child(3){background:var(--td);margin:0 2.7rem}
+.tlbl{font-size:.67rem;letter-spacing:.1em;color:var(--gray);text-transform:uppercase}
+.tname{font-size:.88rem;color:var(--mint);margin-top:.1rem}
+.tval{font-family:var(--fd);font-size:1.38rem;font-weight:700;text-align:right}
+.tdsc{font-size:.69rem;color:var(--gray);text-align:right}
+.mnums{display:flex;flex-direction:column;gap:1.2rem}
+.mn{background:rgba(10,37,53,.62);border:1px solid var(--border);border-radius:12px;padding:1.3rem}
+.mn-v{font-family:var(--fd);font-size:2.25rem;font-weight:900;color:var(--teal);line-height:1;margin-bottom:.32rem}
+.mn-l{font-size:.87rem;color:var(--mint)}
+.arr{background:linear-gradient(135deg,rgba(0,119,168,.3),rgba(0,180,216,.14));border:1px solid var(--teal);border-radius:12px;padding:1.3rem;margin-top:.5rem}
+.arr p{font-size:.85rem;color:var(--mint);line-height:1.65}
+.arr strong{color:var(--w)}
+
+/* CTA */
+#cta{padding:8rem 5rem;text-align:center;overflow:hidden}
+#cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(0,180,216,.08) 0%,transparent 70%)}
+.cta-t{font-family:var(--fd);font-size:clamp(2.2rem,4.5vw,3.75rem);font-weight:900;line-height:1.05;letter-spacing:-.03em;margin-bottom:.85rem}
+.cta-t em{font-style:italic;color:var(--teal)}
+.cta-s{font-size:1.03rem;color:var(--mint);max-width:490px;margin:0 auto 2.4rem;line-height:1.7}
+.cta-acts{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem}
+.cta-guarantee{font-size:.8rem;color:var(--gray);display:flex;align-items:center;justify-content:center;gap:.4rem}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:2.2rem 5rem;display:flex;align-items:center;justify-content:space-between;font-size:.77rem;color:var(--gray);z-index:1;position:relative;flex-wrap:wrap;gap:1rem}
+.flogo{font-family:var(--fd);font-size:1.12rem;font-weight:900;color:var(--w)}
+.flogo span{color:var(--teal)}
+.flinks{display:flex;gap:1.5rem}
+.flinks a:hover{color:var(--mint)}
+
+/* EXIT INTENT POPUP */
+#exit-popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:600;align-items:center;justify-content:center;backdrop-filter:blur(8px)}
+#exit-popup.show{display:flex}
+.exit-modal{background:var(--nm);border:1px solid var(--teal);border-radius:24px;padding:3rem;max-width:460px;width:90%;text-align:center;position:relative}
+.exit-modal::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--mint),var(--teal));border-radius:24px 24px 0 0}
+.exit-badge{font-size:.7rem;font-weight:500;letter-spacing:.1em;color:var(--teal);text-transform:uppercase;margin-bottom:.75rem}
+.exit-title{font-family:var(--fd);font-size:1.9rem;font-weight:900;line-height:1.1;margin-bottom:.75rem}
+.exit-title em{font-style:italic;color:var(--teal)}
+.exit-sub{font-size:.88rem;color:var(--mint);margin-bottom:1.75rem;line-height:1.6}
+.exit-cta{background:var(--teal);color:var(--navy);font-weight:600;font-size:.95rem;padding:.88rem 2rem;border-radius:10px;border:none;cursor:pointer;font-family:var(--fb);transition:all .2s;width:100%;margin-bottom:.75rem}
+.exit-cta:hover{background:var(--mint);transform:translateY(-2px)}
+.exit-no{font-size:.76rem;color:var(--gray);cursor:pointer;transition:color .2s}
+.exit-no:hover{color:var(--mint)}
+.exit-close{position:absolute;top:1rem;right:1.2rem;background:none;border:none;color:var(--gray);font-size:1.3rem;cursor:pointer}
+.exit-close:hover{color:var(--w)}
+.exit-timer{font-size:.72rem;color:var(--teal);margin-bottom:.5rem;display:flex;align-items:center;justify-content:center;gap:.3rem}
+
+/* MODAL */
+.mbg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.77);z-index:500;align-items:center;justify-content:center;backdrop-filter:blur(6px)}
+.mbg.open{display:flex}
+.modal{background:var(--nm);border:1px solid var(--border);border-radius:20px;padding:2.5rem;max-width:440px;width:90%;position:relative;max-height:90vh;overflow-y:auto}
+.modal h3{font-family:var(--fd);font-size:1.38rem;font-weight:700;margin-bottom:.45rem}
+.msub{font-size:.87rem;color:var(--mint);line-height:1.6;margin-bottom:1.4rem}
+.mclose{position:absolute;top:1rem;right:1.2rem;background:none;border:none;color:var(--gray);font-size:1.4rem;cursor:pointer;line-height:1}
+.mclose:hover{color:var(--w)}
+.modal label{display:block;margin-bottom:.35rem}
+.modal input{margin-bottom:.82rem}
+.paypal-info{background:rgba(255,196,57,.08);border:1px solid rgba(255,196,57,.25);border-radius:10px;padding:1rem;margin-bottom:1rem;font-size:.82rem;color:rgba(255,218,100,.9);line-height:1.6}
+.paypal-info strong{display:block;margin-bottom:.35rem;font-size:.85rem}
+.paypal-steps{padding-left:1.1rem}
+.paypal-steps li{margin-bottom:.25rem}
+.modal .btn-p{width:100%;justify-content:center;padding:.88rem;font-size:.95rem}
+.mtrial{font-size:.7rem;color:var(--gray);text-align:center;margin-top:.65rem}
+
+/* CHATBOT */
+#chatbubble{position:fixed;bottom:1.75rem;right:1.75rem;z-index:300;display:flex;flex-direction:column;align-items:flex-end;gap:.7rem}
+.chatbtn{width:54px;height:54px;border-radius:50%;background:var(--teal);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.35rem;box-shadow:0 4px 24px rgba(0,180,216,.4);transition:all .2s;position:relative}
+.chatbtn:hover{background:var(--mint);transform:scale(1.08)}
+.chat-notif{position:absolute;top:-2px;right:-2px;width:15px;height:15px;background:#EF4444;border-radius:50%;border:2px solid var(--navy);display:flex;align-items:center;justify-content:center;font-size:.52rem;color:var(--w);font-weight:700}
+#chatwin{display:none;width:330px;background:var(--nm);border:1px solid var(--border);border-radius:18px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.55);flex-direction:column;animation:slidein .3s var(--ease)}
+@keyframes slidein{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+#chatwin.open{display:flex}
+.chat-hd{background:var(--td);padding:.9rem 1.2rem;display:flex;align-items:center;justify-content:space-between}
+.ch-left{display:flex;align-items:center;gap:.6rem}
+.ch-av{width:32px;height:32px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.ch-name{font-size:.88rem;font-weight:500}
+.ch-st{font-size:.7rem;color:var(--mint);display:flex;align-items:center;gap:.25rem}
+.std{width:6px;height:6px;border-radius:50%;background:#10B981}
+.ch-x{background:none;border:none;color:var(--mint);font-size:1.1rem;cursor:pointer;padding:.2rem}
+.ch-x:hover{color:var(--w)}
+.chat-msgs{height:270px;overflow-y:auto;padding:.9rem;display:flex;flex-direction:column;gap:.6rem;scroll-behavior:smooth}
+.chat-msgs::-webkit-scrollbar{width:4px}
+.chat-msgs::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+.msg{max-width:84%;padding:.6rem .85rem;border-radius:12px;font-size:.81rem;line-height:1.5}
+.msg-b{background:rgba(0,180,216,.12);border:1px solid var(--border);color:var(--mint);align-self:flex-start;border-bottom-left-radius:4px}
+.msg-u{background:var(--td);color:var(--w);align-self:flex-end;border-bottom-right-radius:4px}
+.typing{display:flex;gap:.28rem;align-items:center;padding:.7rem .85rem;align-self:flex-start}
+.td2{width:7px;height:7px;border-radius:50%;background:var(--teal);animation:tp 1.2s infinite}
+.td2:nth-child(2){animation-delay:.2s}.td2:nth-child(3){animation-delay:.4s}
+@keyframes tp{0%,60%,100%{opacity:.3;transform:scale(.9)}30%{opacity:1;transform:scale(1.1)}}
+.chat-quick{padding:.6rem .9rem;display:flex;gap:.35rem;flex-wrap:wrap;border-top:1px solid var(--border)}
+.qb{background:rgba(0,180,216,.1);border:1px solid var(--border);border-radius:99px;padding:.28rem .7rem;font-size:.71rem;color:var(--teal);cursor:pointer;transition:all .2s;font-family:var(--fb)}
+.qb:hover{background:rgba(0,180,216,.2);color:var(--w)}
+.chat-inp{display:flex;gap:.45rem;padding:.7rem .9rem;border-top:1px solid var(--border)}
+.chat-inp input{flex:1;background:rgba(13,27,42,.8);border:1px solid var(--border);border-radius:8px;padding:.5rem .8rem;color:var(--w);font-family:var(--fb);font-size:.8rem;outline:none}
+.chat-inp input:focus{border-color:var(--teal)}
+.chat-send{background:var(--teal);border:none;border-radius:8px;padding:.5rem .8rem;cursor:pointer;font-size:.88rem;color:var(--navy);transition:background .2s}
+.chat-send:hover{background:var(--mint)}
+.chat-pw{text-align:center;font-size:.62rem;color:var(--gray);padding:.35rem;border-top:1px solid var(--border)}
+
+@media(max-width:900px){
+  nav{padding:1rem 1.4rem}
+  .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(13,27,42,.98);flex-direction:column;padding:5rem 2rem 2rem;gap:1.2rem;justify-content:center}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  #hero{grid-template-columns:1fr;padding:5rem 1.4rem 4rem;gap:2.5rem}
+  #guarantee{padding:1.2rem 1.4rem;gap:1.2rem}
+  #counter,#stats{padding:2.5rem 1.4rem}
+  #stats{grid-template-columns:1fr}
+  .si{border-right:none;border-bottom:1px solid var(--border)}
+  .si:last-child{border-bottom:none}
+  #demo,#mockup,#testimonials,#diff,#features,#pricing,#faq,#market,#cta{padding:5rem 1.4rem}
+  .gen-form,.sp-grid{grid-template-columns:1fr}
+  #proc-anim{padding:1.25rem 1.4rem}
+  .mock-layout,.tgrid,.fgrid,.pgrid,.ml{grid-template-columns:1fr}
+  .pc.feat{transform:none}
+  .faq-wrap{max-width:100%}
+  footer{padding:2rem 1.4rem;text-align:center;justify-content:center}
+  .flinks{justify-content:center}
+  #chatbubble{bottom:1rem;right:1rem}
+  #chatwin{width:calc(100vw - 2rem)}
+}
+</style>
+</head>
+<body>
+
+<!-- URGENCY BAR -->
+<div id="urgbar">
+  <span>🔥 Oferta de lanzamiento — </span>
+  <strong>14 días gratis</strong>
+  <span>termina en</span>
+  <span id="countdown">23:59:47</span>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="logo" onclick="scrollTo(0,0)">Craft<span>.</span></div>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="#demo" onclick="closeNav()">Demo gratis</a></li>
+    <li><a href="#testimonials" onclick="closeNav()">Casos reales</a></li>
+    <li><a href="#features" onclick="closeNav()">Features</a></li>
+    <li><a href="#pricing" onclick="closeNav()">Precios</a></li>
+    <li><a href="#faq" onclick="closeNav()">FAQ</a></li>
+    <li><a href="#cta" class="nav-cta" onclick="closeNav()">Empezar gratis</a></li>
+  </ul>
+  <button class="burger" onclick="toggleNav()">☰</button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hbg hbg1"></div><div class="hbg hbg2"></div>
+  <div>
+    <div class="tag-row rv">
+      <div class="tag-dot"></div>
+      <span class="tag-txt">Estrategia para tu negocio</span>
+    </div>
+    <h1 class="rv d1">Tu negocio<br>merece una<br><em>estrategia</em><br>de verdad.</h1>
+    <p class="hsub rv d2">Craft analiza tu negocio, entiende tus objetivos y decide qué crear, cuándo y por qué. No solo genera contenido — te dice qué contenido <em>importa</em>.</p>
+    <div class="sp-row rv d2">
+      <div class="sp-faces">
+        <div class="spf spf-a">ANA</div>
+        <div class="spf spf-b">CAR</div>
+        <div class="spf spf-c">SOF</div>
+      </div>
+      <span>+<span id="sp-count">312</span> negocios ya en lista de espera</span>
+    </div>
+    <div class="hbtns rv d3">
+      <a href="#demo" class="btn btn-p">Probar ahora gratis</a>
+      <a href="#pricing" class="btn btn-s">Ver planes </a>
+    </div>
+  </div>
+  <div class="hcard rv d2">
+    <div class="av av-a">ANA</div>
+    <div class="cname">Ana Martínez</div>
+    <div class="crole">Cafetería La Paloma · Guadalajara, Jalisco</div>
+    <blockquote class="cquote">"Que alguien me diga exactamente qué publicar para llenar mi cafetería el fin de semana."</blockquote>
+    <div class="cres">
+      <div class="cres-l">Resultado con Craft</div>
+      <div class="cres-v">Llena su cafetería los sábados.<br><small style="color:var(--gray)">Craft decidió qué publicar el martes.</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE STRIP -->
+<div id="guarantee">
+  <div class="gitem"><span>🔒</span><span>Pago 100% seguro vía PayPal</span></div>
+  <div class="gitem"><span>↩️</span><span>Garantía de devolución 30 días</span></div>
+  <div class="gitem"><span>✖</span><span>Sin contratos ni permanencia</span></div>
+  <div class="gitem"><span>🎁</span><span>14 días gratis, sin tarjeta</span></div>
+</div>
+
+<!-- COUNTER -->
+<div id="counter">
+  <div class="c-dot"></div>
+  <p><span id="ctr-num">847</span> negocios en lista de espera hoy — <strong>cupos limitados para early adopters</strong></p>
+</div>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="si rv"><div class="sv">70%</div><div class="sl">de pymes en LATAM sin estrategia digital</div><div class="ss">INEGI / OCDE, 2024</div></div>
+  <div class="si rv d1"><div class="sv">6–10x</div><div class="sl">más caro adquirir clientes sin marketing consistente</div><div class="ss">HubSpot State of Marketing, 2024</div></div>
+  <div class="si rv d2"><div class="sv">$3,200</div><div class="sl">MXN/mes promedio en contenido básico externo</div><div class="ss">Encuesta Freelancers MX, 2023</div></div>
+</section>
+
+<!-- DEMO -->
+<section id="demo">
+  <div class="sec-lbl rv">Pruébalo gratis · sin registro</div>
+  <h2 class="sec-title rv d1">Genera tu estrategia<br>de campaña en segundos.</h2>
+  <p class="sec-sub rv d2">Ingresa tu objetivo y Craft te entrega un plan real. El plan completo — con datos, canales y calendario — está desde el Plan Pro.</p>
+  <div class="gen-wrap rv d2">
+    <div class="gen-top">
+      <div><h3>Generador de Campaña</h3><p>Vista previa gratuita · Plan completo desde $299/mes</p></div>
+      <span class="gen-badge">Gratis ahora</span>
+    </div>
+    <div class="gen-form">
+      <div class="fg">
+        <label>Tipo de negocio</label>
+        <select id="btype">
+          <option value="">Selecciona...</option>
+          <option>Cafetería / Restaurante</option>
+          <option>Tienda de ropa / Boutique</option>
+          <option>Salón de belleza / Spa</option>
+          <option>Gym / Estudio fitness</option>
+          <option>Pastelería / Panadería</option>
+          <option>Servicios profesionales</option>
+          <option>Tienda en línea</option>
+          <option>Otro negocio local</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Objetivo principal</label>
+        <select id="goal">
+          <option value="">Selecciona...</option>
+          <option>Más clientes este fin de semana</option>
+          <option>Lanzar un nuevo producto</option>
+          <option>Subir seguidores en Instagram</option>
+          <option>Aumentar ventas en línea</option>
+          <option>Promover una oferta especial</option>
+          <option>Construir comunidad de marca</option>
+        </select>
+      </div>
+      <div class="fg full">
+        <label>¿Qué hace especial a tu negocio? <span style="color:var(--gray)">(opcional)</span></label>
+        <textarea id="special" placeholder="Ej: somos la única cafetería con terraza en la colonia, usamos café de Chiapas..."></textarea>
+      </div>
+    </div>
+    <div id="proc-anim">
+      <div class="proc-steps">
+        <div class="ps" id="ps1"><div class="ps-dot">🎯</div><div class="ps-line"></div><div class="ps-lbl">Objetivo</div></div>
+        <div class="ps" id="ps2"><div class="ps-dot">🔍</div><div class="ps-line"></div><div class="ps-lbl">Análisis</div></div>
+        <div class="ps" id="ps3"><div class="ps-dot">🧠</div><div class="ps-line"></div><div class="ps-lbl">Estrategia</div></div>
+        <div class="ps" id="ps4"><div class="ps-dot">✨</div><div class="ps-line"></div><div class="ps-lbl">Plan listo</div></div>
+      </div>
+      <div class="proc-msg" id="procMsg"><span></span></div>
+    </div>
+    <div class="gen-foot">
+      <p>🔒 Plan completo desde <strong style="color:var(--teal)">$299/mes</strong></p>
+      <button id="genBtn" onclick="generateStrategy()">
+        <span id="btnTxt">Generar estrategia</span><span id="btnArr">→</span>
+        <div class="spin" id="btnSpin"></div>
+      </button>
+    </div>
+    <div id="results"></div>
+  </div>
+</section>
+
+<!-- MOCKUP / DASHBOARD -->
+<section id="mockup">
+  <div class="sec-lbl rv">Así se ve Craft</div>
+  <h2 class="sec-title rv d1">Tu panel de estrategia,<br>listo para usar.</h2>
+  <div class="mock-layout rv d1">
+    <div class="mock-screen">
+      <div class="mock-bar">
+        <div class="mock-dot"></div><div class="mock-dot"></div><div class="mock-dot"></div>
+        <div class="mock-url">craft.app · Mi Campaña</div>
+      </div>
+      <div class="mock-body">
+        <div class="mock-head">📊 Resultados esta semana — Cafetería La Paloma</div>
+        <div class="mock-metrics">
+          <div class="mm"><div class="mm-v">3.2K</div><div class="mm-l">Alcance</div><div class="mm-d">↑ 340%</div></div>
+          <div class="mm"><div class="mm-v">187</div><div class="mm-l">Interacciones</div><div class="mm-d">↑ 89%</div></div>
+          <div class="mm"><div class="mm-v">28</div><div class="mm-l">Nuevos clientes</div><div class="mm-d">↑ 28%</div></div>
+        </div>
+        <div style="font-size:.68rem;color:var(--gray);margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.08em">Calendario de contenido</div>
+        <div class="mock-cal">
+          <div class="mc-hd">L</div><div class="mc-hd">M</div><div class="mc-hd">X</div><div class="mc-hd">J</div><div class="mc-hd">V</div><div class="mc-hd">S</div><div class="mc-hd">D</div>
+          <div class="mc-day"></div><div class="mc-day pub"></div><div class="mc-day"></div><div class="mc-day pub"></div><div class="mc-day has"></div><div class="mc-day"></div><div class="mc-day"></div>
+          <div class="mc-day"></div><div class="mc-day pub"></div><div class="mc-day has"></div><div class="mc-day pub"></div><div class="mc-day"></div><div class="mc-day"></div><div class="mc-day"></div>
+        </div>
+        <div class="mock-post">
+          <div class="mp-ico">📸</div>
+          <div class="mp-txt"><strong>Próximo post · Jueves 10am</strong>"El secreto de nuestro cappuccino 🫶 Cada taza es café de origen Chiapas, tostado esta semana…" #CaféGdl #LasPaloma</div>
+        </div>
+      </div>
+    </div>
+    <div class="mock-points">
+      <div class="mp rv d1">
+        <div class="mp-num">1</div>
+        <div class="mp-info"><strong>Ve tus métricas en un lugar</strong><p>Alcance, interacciones y nuevos clientes de todas tus redes, consolidados y claros.</p></div>
+      </div>
+      <div class="mp rv d2">
+        <div class="mp-num">2</div>
+        <div class="mp-info"><strong>Calendario de contenido automático</strong><p>Craft decide qué días y horarios publicar para maximizar tu alcance según tu industria.</p></div>
+      </div>
+      <div class="mp rv d3">
+        <div class="mp-num">3</div>
+        <div class="mp-info"><strong>Copy listo para publicar</strong><p>Cada post viene con texto optimizado, hashtags estratégicos y llamada a acción. Solo copias y pegas.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="sec-lbl rv">Casos reales</div>
+  <h2 class="sec-title rv d1">Negocios que crecieron<br>con Craft.</h2>
+  <div class="tgrid">
+    <div class="tcard rv">
+      <div class="av av-a" style="margin-bottom:.8rem">ANA</div>
+      <div class="tname">Ana Martínez</div>
+      <div class="trole">Cafetería La Paloma · Guadalajara</div>
+      <blockquote class="tquote">"Antes publicaba dos veces al mes sin saber si funcionaba. Craft me dijo exactamente qué publicar el martes para llenar la terraza el sábado. En 3 semanas noté la diferencia."</blockquote>
+      <div class="tstats">
+        <div class="tstat"><strong>+340%</strong>alcance orgánico</div>
+        <div class="tstat"><strong>+28%</strong>clientes sábado</div>
+      </div>
+    </div>
+    <div class="tcard rv d1">
+      <div class="av av-b" style="margin-bottom:.8rem">CAR</div>
+      <div class="tname">Carlos Reyes</div>
+      <div class="trole">Barbería El Clan · Monterrey</div>
+      <blockquote class="tquote">"Tenía Instagram con 180 seguidores y casi sin movimiento. Craft analizó mi negocio, me generó un calendario de contenido y en 6 semanas llegué a 2,400 seguidores reales."</blockquote>
+      <div class="tstats">
+        <div class="tstat"><strong>180→2,400</strong>seguidores</div>
+        <div class="tstat"><strong>+65%</strong>citas/semana</div>
+      </div>
+    </div>
+    <div class="tcard rv d2">
+      <div class="av av-c" style="margin-bottom:.8rem">SOF</div>
+      <div class="tname">Sofía Núñez</div>
+      <div class="trole">Pastelería Dulce Origen · CDMX</div>
+      <blockquote class="tquote">"Lancé mi línea vegana sin saber cómo comunicarlo. Craft creó toda la estrategia: stories, reels y copy para WhatsApp. Se agotaron en 48 horas."</blockquote>
+      <div class="tstats">
+        <div class="tstat"><strong>Sold out</strong>en 48 hrs</div>
+        <div class="tstat"><strong>+890</strong>seguidores</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFF -->
+<section id="diff">
+  <div class="sec-lbl rv">El diferenciador</div>
+  <p class="dclaim rv d1">Las otras herramientas <em>crean.</em></p>
+  <p class="dclaim rv d2">Craft <em>decide</em> qué crear.</p>
+  <p style="font-size:.96rem;color:var(--mint);max-width:510px;line-height:1.7;margin-top:.85rem" class="rv d3">No reemplaza Canva ni otras herramientas — las orquesta con estrategia para tu negocio.</p>
+  <div class="rv">
+    <table>
+      <thead><tr><th>Herramienta</th><th>Sola, hoy</th><th>Con Craft integrado</th></tr></thead>
+      <tbody>
+        <tr><td>Canva</td><td>Diseña si tú le dices qué</td><td>Sabe qué diseñar según tu objetivo</td></tr>
+        <tr><td>ChatGPT / Claude</td><td>Escribe si tú le dices qué</td><td>Genera copy alineado a tu campaña</td></tr>
+        <tr><td>Meta Ads</td><td>Publica si tú le dices a quién</td><td>Sugiere audiencia + horario óptimo</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="dfn rv">Craft no reemplaza estas herramientas — las orquesta con estrategia.</p>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="sec-lbl rv">Qué incluye</div>
+  <h2 class="sec-title rv d1">Todo lo que necesitas,<br>según tu plan.</h2>
+  <div class="fgrid">
+    <div class="fcard rv"><div class="ficon">🧠</div><div class="ftitle">Estratega inteligente</div><div class="fdesc">Entiende tu objetivo y genera un plan de contenido completo, no solo posts sueltos.</div><span class="fbadge b-all">Todos los planes</span></div>
+    <div class="fcard rv d1"><div class="ficon">📈</div><div class="ftitle">Datos en tiempo real</div><div class="fdesc">Analiza tendencias de tu industria, competencia y audiencia para sugerencias siempre relevantes.</div><span class="fbadge b-pro">Pro +</span></div>
+    <div class="fcard rv d2"><div class="ficon">🎨</div><div class="ftitle">Consistencia de marca</div><div class="fdesc">Todos los assets mantienen tu identidad visual y tono de comunicación automáticamente.</div><span class="fbadge b-pro">Pro +</span></div>
+    <div class="fcard rv d1"><div class="ficon">✅</div><div class="ftitle">Medición de impacto</div><div class="fdesc">Rastrea qué campañas funcionaron y ajusta sugerencias con base en resultados reales.</div><span class="fbadge b-prem">Premium</span></div>
+    <div class="fcard rv d2"><div class="ficon">🏪</div><div class="ftitle">Hecho para pymes</div><div class="fdesc">Sin equipo creativo, sin curva de aprendizaje. Listo en minutos desde el primer día.</div><span class="fbadge b-all">Todos los planes</span></div>
+    <div class="fcard rv d3"><div class="ficon">📡</div><div class="ftitle">Multi-canal</div><div class="fdesc">Instagram, email, WhatsApp Business y Google My Business desde un solo lugar.</div><span class="fbadge b-prem">Premium</span></div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="sec-lbl rv">Planes y precios</div>
+  <h2 class="sec-title rv d1">Elige el plan<br>que le va a tu negocio.</h2>
+  <p style="font-size:.96rem;color:var(--mint);max-width:510px;line-height:1.7;margin-bottom:2rem" class="rv d2">Sin contratos. Sin letra chica. 14 días gratis en todos los planes.</p>
+  <div class="ptoggle rv d2">
+    <div class="tog">
+      <button class="to on" id="tog-m" onclick="setToggle('m')">Mensual</button>
+      <button class="to" id="tog-a" onclick="setToggle('a')">Anual</button>
+    </div>
+    <span class="save-tag" id="save-tag">🎁 2 meses gratis</span>
+  </div>
+  <div class="pgrid">
+    <div class="pc rv">
+      <div class="ph">
+        <div class="pname">Básico</div>
+        <div class="pdesc">Para dar el primer paso con contenido estratégico.</div>
+        <div class="ppr"><span class="pcur">$</span><span class="pamt" id="p1">199</span><span class="pper">/mes MXN</span></div>
+        <div class="psave" id="s1">≈ $11 USD · Menos que un café diario</div>
+      </div>
+      <hr class="pdiv"/>
+      <ul class="pf">
+        <li>Generador de campaña (3/mes)</li>
+        <li>Plan de contenido semanal</li>
+        <li>Copy para 8 posts/mes</li>
+        <li>Perfil de marca básico</li>
+        <li class="off">Datos de tendencias en tiempo real</li>
+        <li class="off">Consistencia automática de marca</li>
+        <li class="off">Multi-canal (email, WhatsApp)</li>
+        <li class="off">Métricas de impacto</li>
+      </ul>
+      <button class="pbtn pb-out" onclick="openModal('Básico','199','basico')">Empezar 14 días gratis</button>
+      <div class="pp-note">💳 Pago seguro vía PayPal</div>
+    </div>
+    <div class="pc feat rv d1">
+      <div class="ph">
+        <div class="pname">Pro</div>
+        <div class="pdesc">Para crecer en serio y medir cada resultado.</div>
+        <div class="ppr"><span class="pcur">$</span><span class="pamt" id="p2">299</span><span class="pper">/mes MXN</span></div>
+        <div class="psave" id="s2">Ahorra $600/mes vs. un freelancer</div>
+      </div>
+      <hr class="pdiv"/>
+      <ul class="pf">
+        <li>Todo lo del plan Básico</li>
+        <li>Campañas ilimitadas</li>
+        <li>Datos de tendencias en tiempo real</li>
+        <li>Consistencia automática de marca</li>
+        <li>Instagram + Facebook + TikTok</li>
+        <li>Copy + descripciones de producto</li>
+        <li class="off">Multi-canal completo (email, WhatsApp)</li>
+        <li class="off">Dashboard de métricas avanzado</li>
+      </ul>
+      <button class="pbtn pb-sol" onclick="openModal('Pro','299','pro')">Empezar 14 días gratis</button>
+      <div class="pp-note">💳 Pago seguro vía PayPal</div>
+    </div>
+    <div class="pc rv d2">
+      <div class="ph">
+        <div class="pname">Premium</div>
+        <div class="pdesc">Acceso total. Para el máximo impacto sin agencia.</div>
+        <div class="ppr"><span class="pcur">$</span><span class="pamt" id="p3">499</span><span class="pper">/mes MXN</span></div>
+        <div class="psave" id="s3">85% más barato que una agencia digital</div>
+      </div>
+      <hr class="pdiv"/>
+      <ul class="pf">
+        <li>Todo lo del plan Pro</li>
+        <li>Multi-canal completo</li>
+        <li>Dashboard de métricas e impacto</li>
+        <li>Craft aprende de tus resultados</li>
+        <li>Calendarios automatizados</li>
+        <li>Soporte prioritario por WhatsApp</li>
+        <li>Reporte mensual de rendimiento</li>
+        <li>1 consultoría estratégica/mes (30 min)</li>
+      </ul>
+      <button class="pbtn pb-out" onclick="openModal('Premium','499','premium')">Empezar 14 días gratis</button>
+      <div class="pp-note">💳 Pago seguro vía PayPal</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="sec-lbl rv">FAQ</div>
+  <h2 class="sec-title rv d1">Preguntas frecuentes.</h2>
+  <div class="faq-wrap rv d2">
+    <div class="fqi">
+      <div class="fqq" onclick="toggleFaq(this)">¿Necesito conocimientos de marketing para usar Craft? <span class="fqi-ico">+</span></div>
+      <div class="fqa"><p>No. Craft está diseñado para dueños de negocio, no para marketeros. Solo describes tu objetivo —"quiero más clientes este fin de semana"— y Craft hace el resto. Si sabes usar WhatsApp, sabes usar Craft.</p></div>
+    </div>
+    <div class="fqi">
+      <div class="fqq" onclick="toggleFaq(this)">¿Cómo funciona el pago con PayPal? <span class="fqi-ico">+</span></div>
+      <div class="fqa"><p>Al registrarte recibes un enlace de pago de PayPal para tu plan elegido. Puedes pagar con tu cuenta PayPal o con cualquier tarjeta de crédito/débito. El cobro empieza solo después de tus 14 días gratis. Nosotros nunca almacenamos tus datos de pago.</p></div>
+    </div>
+    <div class="fqi">
+      <div class="fqq" onclick="toggleFaq(this)">¿Puedo cancelar en cualquier momento? <span class="fqi-ico">+</span></div>
+      <div class="fqa"><p>Sí, 100%. Sin penalizaciones, sin preguntas. Cancelas escribiéndonos por WhatsApp o correo y tu acceso se mantiene hasta el final del periodo pagado. No hay contratos ni compromisos de permanencia.</p></div>
+    </div>
+    <div class="fqi">
+      <div class="fqq" onclick="toggleFaq(this)">¿Tienen garantía de devolución? <span class="fqi-ico">+</span></div>
+      <div class="fqa"><p>Sí. Si en los primeros 30 días no estás satisfecho con los resultados de Craft, te devolvemos el 100% de tu primer mes pagado, sin preguntas. Creemos en el producto y queremos que tú también lo compruebes.</p></div>
+    </div>
+    <div class="fqi">
+      <div class="fqq" onclick="toggleFaq(this)">¿Funciona para cualquier tipo de negocio? <span class="fqi-ico">+</span></div>
+      <div class="fqa"><p>Craft está optimizado para pequeños negocios locales: restaurantes, tiendas, salones de belleza, gimnasios, servicios profesionales y tiendas en línea. Prueba el demo arriba y verás si se adapta a tu caso.</p></div>
+    </div>
+    <div class="fqi">
+      <div class="fqq" onclick="toggleFaq(this)">¿En cuánto tiempo veo resultados? <span class="fqi-ico">+</span></div>
+      <div class="fqa"><p>La mayoría ve un aumento en alcance orgánico en las primeras 2-3 semanas publicando consistentemente con el plan de Craft. Ana notó diferencia en 3 semanas. Carlos llegó a 2,400 seguidores en 6 semanas.</p></div>
+    </div>
+    <div class="fqi">
+      <div class="fqq" onclick="toggleFaq(this)">¿Qué diferencia hay entre el plan anual y mensual? <span class="fqi-ico">+</span></div>
+      <div class="fqa"><p>El plan anual incluye exactamente las mismas funciones que el mensual, pero pagas el equivalente a 10 meses y obtienes 2 meses completamente gratis. Es la opción ideal si ya sabes que Craft es para ti — ahorras hasta $1,200 MXN al año en el plan Premium.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET -->
+<section id="market">
+  <div class="sec-lbl rv">Oportunidad</div>
+  <h2 class="sec-title rv d1">Un mercado enorme<br>sin solución real.</h2>
+  <div class="ml">
+    <div class="tfunnel rv">
+      <div class="trow"><div><div class="tlbl">TAM</div><div class="tname">Mercado Total LATAM</div></div><div><div class="tval">$18,400M</div><div class="tdsc">USD · Pymes con necesidad de marketing</div></div></div>
+      <div class="trow"><div><div class="tlbl">SAM</div><div class="tname">Mercado Accesible</div></div><div><div class="tval">$2,400M</div><div class="tdsc">USD · Con smartphone y presencia digital</div></div></div>
+      <div class="trow"><div><div class="tlbl">SOM</div><div class="tname">Objetivo Año 1</div></div><div><div class="tval">$24M</div><div class="tdsc">USD · México + Colombia</div></div></div>
+    </div>
+    <div class="mnums rv d1">
+      <div class="mn"><div class="mn-v">4.2M</div><div class="mn-l">pequeñas empresas en México</div></div>
+      <div class="mn"><div class="mn-v">68%</div><div class="mn-l">sin presencia digital activa</div></div>
+      <div class="arr"><p>Con <strong>10,000 clientes a $299 MXN/mes</strong><br>→ <strong>$35.8M MXN ARR en año 1</strong><br><small style="color:var(--gray)">Fuente: INEGI 2024, Statista LATAM 2024</small></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="sec-lbl rv">Únete hoy</div>
+  <h2 class="cta-t rv d1">Dale a tu negocio<br>una <em>estrategia</em> real.</h2>
+  <p class="cta-s rv d2">14 días gratis. Sin tarjeta. Sin compromisos.<br>Garantía de devolución 30 días.</p>
+  <div class="cta-acts rv d3">
+    <button class="btn btn-p" style="font-size:1rem;padding:.95rem 2.2rem" onclick="openModal('Pro','299','pro')">Empezar gratis ahora →</button>
+  </div>
+  <p class="cta-guarantee rv d4">🔒 Pago seguro vía PayPal · ↩️ 30 días de garantía</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="flogo">Craft<span>.</span></div>
+  <div>© 2026 Craft · Guadalajara, México</div>
+  <div class="flinks">
+    <a href="#pricing">Precios</a>
+    <a href="#faq">FAQ</a>
+    <a href="mailto:hola@craft.com.mx">Contacto</a>
+  </div>
+</footer>
+
+<!-- MODAL REGISTRO + INSTRUCCIONES PAYPAL -->
+<div class="mbg" id="modal">
+  <div class="modal">
+    <button class="mclose" onclick="closeModal()">×</button>
+    <h3>Empieza gratis 14 días 🚀</h3>
+    <p class="msub">Plan <strong id="m-plan"></strong> — $<span id="m-price"></span> MXN/mes después del periodo de prueba.</p>
+    <label>Correo electrónico</label>
+    <input type="email" id="m-email" placeholder="tu@correo.com"/>
+    <label>Nombre de tu negocio</label>
+    <input type="text" id="m-biz" placeholder="Ej: Cafetería La Paloma"/>
+    <div class="paypal-info">
+      <strong>💳 Cómo funciona el pago:</strong>
+      <ol class="paypal-steps">
+        <li>Registra tu correo arriba</li>
+        <li>Te enviamos el enlace de pago de PayPal para tu plan</li>
+        <li>Pagas solo después de tus 14 días gratis</li>
+        <li>Puedes cancelar en cualquier momento</li>
+      </ol>
+    </div>
+    <button class="btn btn-p" onclick="submitModal()">Quiero mis 14 días gratis →</button>
+    <p class="mtrial">Sin tarjeta ahora · Pago vía PayPal al activar · Cancela cuando quieras</p>
+  </div>
+</div>
+
+<!-- EXIT INTENT POPUP -->
+<div id="exit-popup">
+  <div class="exit-modal">
+    <button class="exit-close" onclick="closeExit()">×</button>
+    <div class="exit-badge">⚡ Oferta especial</div>
+    <h2 class="exit-title">¿Seguro que<br>te vas sin <em>crecer</em>?</h2>
+    <p class="exit-sub">Solo por salir ahora, te damos <strong>14 días gratis</strong> en lugar de 7. Sin tarjeta, sin trampa.</p>
+    <div class="exit-timer">⏱ Esta oferta expira en <strong id="exit-sec">59</strong> segundos</div>
+    <button class="exit-cta" onclick="exitClaim()">Quiero mis 14 días gratis →</button>
+    <div class="exit-no" onclick="closeExit()">No, prefiero seguir sin estrategia</div>
+  </div>
+</div>
+
+<!-- CHATBOT -->
+<div id="chatbubble">
+  <div id="chatwin">
+    <div class="chat-hd">
+      <div class="ch-left">
+        <div class="ch-av">💬</div>
+        <div><div class="ch-name">Craft Soporte</div><div class="ch-st"><div class="std"></div>En línea ahora</div></div>
+      </div>
+      <button class="ch-x" onclick="toggleChat()">×</button>
+    </div>
+    <div class="chat-msgs" id="chatmsgs"></div>
+    <div class="chat-quick" id="quickbtns">
+      <button class="qb" onclick="sendQuick('¿Cómo funciona?')">¿Cómo funciona?</button>
+      <button class="qb" onclick="sendQuick('¿Cuánto cuesta?')">¿Cuánto cuesta?</button>
+      <button class="qb" onclick="sendQuick('¿Hay prueba gratis?')">¿Prueba gratis?</button>
+      <button class="qb" onclick="sendQuick('¿Cómo pago?')">¿Cómo pago?</button>
+    </div>
+    <div class="chat-inp">
+      <input type="text" id="chatInput" placeholder="Escribe tu pregunta..." onkeydown="if(event.key==='Enter')sendMsg()"/>
+      <button class="chat-send" onclick="sendMsg()">↑</button>
+    </div>
+    <div class="chat-pw">Soporte Craft · Respuestas automáticas + equipo humano</div>
+  </div>
+  <button class="chatbtn" onclick="toggleChat()">
+    💬<div class="chat-notif">1</div>
+  </button>
+</div>
+
+<script>
+// ── REVEAL ────────────────────────────────────────────
+const obs = new IntersectionObserver(e => {
+  e.forEach(x => { if(x.isIntersecting) x.target.classList.add('on') })
+}, { threshold:.1, rootMargin:'0px 0px -28px 0px' });
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+
+// ── NAV ───────────────────────────────────────────────
+function toggleNav() { document.getElementById('navlinks').classList.toggle('open') }
+function closeNav()  { document.getElementById('navlinks').classList.remove('open') }
+
+// ── URGENCY COUNTDOWN ─────────────────────────────────
+(function() {
+  // Persist countdown in sessionStorage so it doesn't reset on each visit
+  let key = 'craft_cd';
+  let stored = sessionStorage.getItem(key);
+  let end = stored ? parseInt(stored) : Date.now() + 24*60*60*1000;
+  if (!stored) sessionStorage.setItem(key, end);
+  function tick() {
+    let diff = Math.max(0, Math.floor((end - Date.now()) / 1000));
+    let h = String(Math.floor(diff/3600)).padStart(2,'0');
+    let m = String(Math.floor((diff%3600)/60)).padStart(2,'0');
+    let s = String(diff%60).padStart(2,'0');
+    let el = document.getElementById('countdown');
+    if (el) el.textContent = h+':'+m+':'+s;
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+
+// ── LIVE COUNTER ──────────────────────────────────────
+let base = 847, sp = 312;
+function bumpCounter() {
+  if (Math.random() < .35) {
+    base += Math.floor(Math.random()*3)+1;
+    sp++;
+    let el1 = document.getElementById('ctr-num');
+    let el2 = document.getElementById('sp-count');
+    if (el1) el1.textContent = base.toLocaleString('es-MX');
+    if (el2) el2.textContent = sp.toLocaleString('es-MX');
+  }
+}
+setInterval(bumpCounter, 9000);
+
+// ── PRICING TOGGLE ────────────────────────────────────
+const prices = { m:[199,299,499], a:[159,239,399] };
+const saves  = {
+  m:['≈ $11 USD · Menos que un café diario','Ahorra $600/mes vs. un freelancer','85% más barato que una agencia'],
+  a:['Ahorras $480 al año · 2 meses gratis','Ahorras $720 al año · 2 meses gratis','Ahorras $1,200 al año · 2 meses gratis']
+};
+function setToggle(m) {
+  document.getElementById('tog-m').classList.toggle('on', m==='m');
+  document.getElementById('tog-a').classList.toggle('on', m==='a');
+  let st = document.getElementById('save-tag');
+  st.style.display = m==='a' ? 'inline-block' : 'none';
+  [1,2,3].forEach(i => {
+    document.getElementById('p'+i).textContent = prices[m][i-1];
+    document.getElementById('s'+i).textContent = saves[m][i-1];
+  });
+}
+
+// ── PROCESS ANIMATION ────────────────────────────────
+const msgs = [
+  'Analizando tu tipo de negocio...',
+  'Revisando tendencias de tu industria...',
+  'Construyendo tu estrategia personalizada...',
+  '¡Tu plan está listo!'
+];
+function runAnim(cb) {
+  document.getElementById('proc-anim').style.display = 'block';
+  ['ps1','ps2','ps3','ps4'].forEach(id => {
+    let el = document.getElementById(id);
+    el.className = 'ps';
+    el.querySelector('.ps-dot').textContent = ['🎯','🔍','🧠','✨'][['ps1','ps2','ps3','ps4'].indexOf(id)];
+  });
+  let step = 0;
+  function next() {
+    if (step > 0) {
+      let prev = document.getElementById('ps'+step);
+      prev.className = 'ps done';
+      prev.querySelector('.ps-dot').textContent = '✓';
+    }
+    step++;
+    if (step > 4) { cb(); return; }
+    document.getElementById('ps'+step).className = 'ps active';
+    document.getElementById('procMsg').innerHTML = `<span>${msgs[step-1]}</span>`;
+    setTimeout(next, step < 4 ? 750 : 500);
+  }
+  next();
+}
+
+// ── CAMPAIGN GENERATOR ────────────────────────────────
+const strats = {
+  'Cafetería / Restaurante': {
+    'Más clientes este fin de semana': {
+      t:'Campaña: Fin de Semana Lleno',
+      canal:'Instagram + WhatsApp Business',
+      dias:'Publica martes y jueves antes del mediodía',
+      copy:'Reels mostrando tu platillo estrella con luz natural. Stories con countdown "solo quedan X mesas este sábado".',
+      tip:'Contenido de comida publicado martes-jueves genera 3x más reservas el fin de semana que publicar viernes.',
+      locked:['Audiencia exacta: Mujeres 25-38, radio 5km','Horario: Martes 10am y Jueves 7pm','12 hashtags de alto impacto para tu ciudad','Copy completo 4 posts + 8 stories','Mensaje WhatsApp para clientes frecuentes']
+    },
+    'Lanzar un nuevo producto': {
+      t:'Campaña: Lanzamiento 5 Días',
+      canal:'Instagram + Facebook',
+      dias:'Días 1-2: teaser · Día 3: reveal · Días 4-5: social proof',
+      copy:'Días 1-2: detalles ocultos, genera intriga. Día 3: video reveal. Días 4-5: fotos y reseñas de primeros clientes.',
+      tip:'Lanzamientos con teaser de 48h generan 2.4x más engagement que anuncios directos.',
+      locked:['Segmentación personalizada por ciudad','Copy completo de los 5 días','Plan Reels + Stories + Feed','Hashtags de nicho verificados','Seguimiento post-lanzamiento']
+    }
+  },
+  default: {
+    default: {
+      t:'Campaña: Crecimiento de Marca',
+      canal:'Instagram + red principal de tu negocio',
+      dias:'Calendario 4 semanas · 4-5 publicaciones/semana',
+      copy:'Mix: 40% educativo, 30% entretenimiento/behind the scenes, 30% promocional. Consistencia es clave.',
+      tip:'Negocios que publican consistentemente 30 días ven +180% de alcance orgánico en promedio.',
+      locked:['Análisis de audiencia de tu industria','Calendario detallado semana por semana','Copy personalizado por post','Hashtags de alto impacto','Métricas clave a monitorear']
+    }
+  }
+};
+
+function generateStrategy() {
+  const btype = document.getElementById('btype').value;
+  const goal  = document.getElementById('goal').value;
+  const spec  = document.getElementById('special').value;
+  if (!btype || !goal) { alert('Por favor selecciona tu tipo de negocio y objetivo.'); return; }
+  const btn = document.getElementById('genBtn');
+  btn.disabled = true;
+  document.getElementById('btnTxt').textContent = 'Analizando';
+  document.getElementById('btnSpin').style.display = 'block';
+  document.getElementById('btnArr').style.display = 'none';
+  document.getElementById('results').style.display = 'none';
+  runAnim(() => {
+    const cat = strats[btype] || strats.default;
+    const s   = (cat[goal] || cat.default || strats.default.default);
+    const res = document.getElementById('results');
+    res.style.display = 'block';
+    res.innerHTML = `
+      <div class="res-hd">
+        <h4>✦ ${s.t}</h4>
+        <div class="lock-b">🔒 Completo en Plan Pro</div>
+      </div>
+      <div class="sp-grid">
+        <div class="sc"><div class="st">📡 Canal recomendado</div><div class="sb"><strong>${s.canal}</strong><br><br>${s.dias}</div></div>
+        <div class="sc"><div class="st">✍️ Tipo de contenido</div><div class="sb">${s.copy}</div></div>
+        <div class="sc"><div class="st">💡 Insight</div><div class="sb">${s.tip}${spec?`<br><br><em style="color:var(--teal)">Para "${spec}": este diferenciador es tu mayor activo — úsalo en cada post.</em>`:''}</div></div>
+        <div class="sc blurred"><div class="st">📋 Plan completo</div><div class="sb"><ul>${s.locked.map(x=>`<li>${x}</li>`).join('')}</ul></div></div>
+      </div>
+      <div class="upcta">
+        <p>Estás viendo el <strong>25% de tu estrategia</strong>. El plan completo incluye copy listo, calendario, hashtags y métricas.</p>
+        <a href="#pricing">Ver Plan Pro →</a>
+      </div>`;
+    btn.disabled = false;
+    document.getElementById('btnTxt').textContent = 'Generar otra';
+    document.getElementById('btnSpin').style.display = 'none';
+    document.getElementById('btnArr').style.display = 'inline';
+    res.scrollIntoView({ behavior:'smooth', block:'start' });
+  });
+}
+
+// ── FAQ ───────────────────────────────────────────────
+function toggleFaq(el) {
+  const item = el.closest('.fqi');
+  const was  = item.classList.contains('open');
+  document.querySelectorAll('.fqi.open').forEach(i => i.classList.remove('open'));
+  if (!was) item.classList.add('open');
+}
+
+// ── MODAL ─────────────────────────────────────────────
+function openModal(plan, price) {
+  document.getElementById('m-plan').textContent  = plan;
+  document.getElementById('m-price').textContent = price;
+  document.getElementById('modal').classList.add('open');
+}
+function closeModal() { document.getElementById('modal').classList.remove('open') }
+document.getElementById('modal').addEventListener('click', function(e) { if(e.target===this) closeModal() });
+function submitModal() {
+  const email = document.getElementById('m-email').value.trim();
+  const biz   = document.getElementById('m-biz').value.trim();
+  if (!email || !biz) { alert('Por favor llena todos los campos.'); return; }
+  const plan  = document.getElementById('m-plan').textContent;
+  const price = document.getElementById('m-price').textContent;
+  // ── PAYPAL INTEGRATION ─────────────────────────────
+  // CUANDO TENGAS TU ENLACE DE PAYPAL:
+  // 1. Abre la app PayPal → Solicitar dinero → crea enlace por plan
+  // 2. Reemplaza las URLs abajo con tus enlaces reales
+  const paypalLinks = {
+    'Básico':  'https://paypal.me/TU_USUARIO/199',  // ← reemplaza
+    'Pro':     'https://paypal.me/TU_USUARIO/299',  // ← reemplaza
+    'Premium': 'https://paypal.me/TU_USUARIO/499'   // ← reemplaza
+  };
+  document.querySelector('.modal').innerHTML = `
+    <div style="text-align:center;padding:1.5rem 0">
+      <div style="font-size:3rem;margin-bottom:1rem">🎉</div>
+      <h3 style="font-family:var(--fd);margin-bottom:.65rem">¡Ya casi listo!</h3>
+      <p style="color:var(--mint);font-size:.88rem;line-height:1.75;margin-bottom:1.5rem">
+        Hola <strong>${biz}</strong> 👋<br>
+        Te registramos con <strong>${email}</strong><br><br>
+        Tus <strong>14 días gratis</strong> comienzan hoy.<br>
+        Al terminar, activa tu Plan ${plan} por <strong>$${price} MXN/mes</strong> vía PayPal.
+      </p>
+      <a href="${paypalLinks[plan] || 'https://paypal.me/TU_USUARIO'}" target="_blank"
+         style="display:block;background:var(--teal);color:var(--navy);font-weight:600;padding:.9rem 1.5rem;border-radius:10px;font-size:.92rem;margin-bottom:.75rem;transition:background .2s"
+         onmouseover="this.style.background='var(--mint)'" onmouseout="this.style.background='var(--teal)'">
+        💳 Activar con PayPal después del periodo gratis
+      </a>
+      <p style="font-size:.72rem;color:var(--gray)">También te enviamos el enlace a <strong>${email}</strong> para que lo tengas guardado.</p>
+      <br>
+      <button class="btn btn-s" onclick="closeModal()" style="margin:0 auto;font-size:.82rem">Cerrar y empezar →</button>
+    </div>`;
+}
+
+// ── EXIT INTENT ───────────────────────────────────────
+let exitShown = false;
+let exitTimer;
+document.addEventListener('mouseleave', (e) => {
+  if (e.clientY < 20 && !exitShown) {
+    exitShown = true;
+    document.getElementById('exit-popup').classList.add('show');
+    let sec = 59;
+    exitTimer = setInterval(() => {
+      sec--;
+      let el = document.getElementById('exit-sec');
+      if (el) el.textContent = sec;
+      if (sec <= 0) { clearInterval(exitTimer); closeExit(); }
+    }, 1000);
+  }
+});
+function closeExit() {
+  document.getElementById('exit-popup').classList.remove('show');
+  clearInterval(exitTimer);
+}
+function exitClaim() {
+  closeExit();
+  openModal('Pro','299','pro');
+}
+
+// ── CHATBOT ──────────────────────────────────────────
+// ── N8N WEBHOOK ──────────────────────────────────────
+// Cuando configures tu chatbot en N8N:
+// 1. Crea un workflow con trigger "Webhook" en N8N
+// 2. Copia la URL del webhook y pégala abajo (reemplaza el placeholder)
+// 3. El webhook recibe: { "message": "texto", "sessionId": "id" }
+// 4. Tu flujo N8N debe devolver: { "reply": "respuesta del bot" }
+const N8N_WEBHOOK = 'https://TU-INSTANCIA.n8n.cloud/webhook/craft-soporte';
+// ─────────────────────────────────────────────────────
+
+const faqs = {
+  'cómo funciona':  'Craft analiza tu negocio y objetivos, y genera un plan de contenido estratégico completo: qué publicar, cuándo, en qué canal y con qué copy. Puedes probarlo gratis arriba 👆',
+  'cuánto cuesta':  'Tenemos 3 planes: Básico $199/mes, Pro $299/mes y Premium $499/mes MXN. Todos incluyen 14 días gratis. ¿Te explico qué incluye cada uno?',
+  'prueba gratis':  '¡Sí! Todos los planes incluyen 14 días completamente gratis, sin tarjeta. Solo necesitas tu correo y nombre del negocio. <a href="#pricing" onclick="closeChat()">Ver planes →</a>',
+  'cancelar':       'Puedes cancelar en cualquier momento, sin penalizaciones. Tu acceso se mantiene hasta el final del periodo pagado.',
+  'paypal':         'Los pagos son vía PayPal — uno de los sistemas más seguros del mundo. Puedes pagar con cuenta PayPal o con cualquier tarjeta de crédito/débito. El cobro empieza solo después de tus 14 días gratis.',
+  'garantía':       '¡Sí! Si en los primeros 30 días no estás satisfecho, te devolvemos el 100% de tu primer mes. Sin preguntas.',
+  'resultados':     'Ana (cafetería) vio diferencia en 3 semanas. Carlos (barbería) pasó de 180 a 2,400 seguidores en 6 semanas. Sofía agotó su lanzamiento en 48 horas.',
+  'instagram':      'Sí, Craft funciona para Instagram desde el Plan Básico. El Plan Pro agrega Facebook y TikTok. El Premium incluye WhatsApp Business, email y Google My Business.',
+  'precio':         'Básico $199/mes · Pro $299/mes · Premium $499/mes MXN. Con plan anual ahorras 2 meses. ¿Cuál te interesa?',
+  default:          'Gracias por tu mensaje. Nuestro equipo te responde en menos de 24 horas. También puedes escribirnos a <strong>hola@craft.com.mx</strong> o revisar nuestro <a href="#faq">FAQ</a>. 🙌'
+};
+
+let chatOpen = false, greeted = false;
+function toggleChat() {
+  chatOpen = !chatOpen;
+  document.getElementById('chatwin').classList.toggle('open', chatOpen);
+  document.querySelector('.chat-notif').style.display = 'none';
+  if (chatOpen && !greeted) {
+    greeted = true;
+    setTimeout(() => addMsg('b','👋 ¡Hola! Soy el asistente de Craft. ¿En qué puedo ayudarte hoy?'), 350);
+  }
+}
+function closeChat() { chatOpen = false; document.getElementById('chatwin').classList.remove('open') }
+
+function addMsg(type, text) {
+  const div = document.createElement('div');
+  div.className = `msg msg-${type}`;
+  div.innerHTML = text;
+  const msgs = document.getElementById('chatmsgs');
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+function showTyping() {
+  const d = document.createElement('div');
+  d.className = 'typing'; d.id = 'typ';
+  d.innerHTML = '<div class="td2"></div><div class="td2"></div><div class="td2"></div>';
+  document.getElementById('chatmsgs').appendChild(d);
+  document.getElementById('chatmsgs').scrollTop = 9999;
+}
+function rmTyping() { const t=document.getElementById('typ'); if(t) t.remove() }
+
+async function getBotReply(msg) {
+  // Try N8N first (if configured)
+  if (!N8N_WEBHOOK.includes('TU-INSTANCIA')) {
+    try {
+      const r = await fetch(N8N_WEBHOOK, {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ message: msg, sessionId: 'craft-'+Date.now() })
+      });
+      const d = await r.json();
+      if (d.reply) return d.reply;
+    } catch(e) { /* fallback */ }
+  }
+  // Local FAQ fallback
+  const lower = msg.toLowerCase();
+  for (const k of Object.keys(faqs)) {
+    if (k !== 'default' && lower.includes(k)) return faqs[k];
+  }
+  return faqs.default;
+}
+
+async function sendMsg() {
+  const inp = document.getElementById('chatInput');
+  const txt = inp.value.trim();
+  if (!txt) return;
+  inp.value = '';
+  document.getElementById('quickbtns').style.display = 'none';
+  addMsg('u', txt);
+  showTyping();
+  const reply = await getBotReply(txt);
+  setTimeout(() => { rmTyping(); addMsg('b', reply); }, 1000);
+}
+function sendQuick(txt) {
+  document.getElementById('chatInput').value = txt;
+  sendMsg();
+}
+</script>
+</body>
+</html>
